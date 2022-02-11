@@ -1,0 +1,211 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+}
+
+.navbar{
+    display: flex;
+    padding: 3px 0px;
+    background:linear-gradient( to right ,rgb(98, 98, 231),rgb(236, 152, 152));
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+}
+
+.logo img{
+    height: 43px;
+    width: 43px;
+    border-radius: 20px;
+    margin-left: 8px;
+    border: 2px solid black;
+}
+
+.navText{
+    font-family: 'Inconsolata', monospace;
+    font-weight: bolder;
+    font-size: 27px;
+    margin-left: 10px;
+}
+
+.footer{
+    /* border: 2px solid black; */
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: space-between;
+    background-color: black;
+}
+
+.leftFooter{
+    position: relative;
+    left: 5%;
+}
+
+.centerFooter{
+    /* margin-left: 25%; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controllers{
+    margin-bottom: 5px;
+}
+
+.fa{
+    font-size: 24px;
+    margin: 0 15px;
+    color: white;
+}
+
+input[type="range"] {
+    width:350px;
+}
+
+.rightFooter img{
+    height: 24px;
+    width: 30px;
+}
+
+.rightFooter{
+    position: relative;
+    right: 10%;
+    bottom: 10%;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 0.6s;
+    transition-timing-function: linear;
+}
+
+.musicList{
+    height: 80vh;
+    margin: auto;
+    /* border: 2px solid red; */
+    background-image: url('../musicPlayer/bodypic.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    overflow-y: auto;
+}
+
+.songs{
+    background: none;
+    display: inline-block;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 5px 1%;
+    max-width: 98%;
+    /* border: 2px solid white; */
+    position: relative;
+    padding-left: 10px;
+}
+
+.songLogo {
+    height: 45px;
+    width: 50px;
+    border-radius: 25px;
+    /* background-image: url('..musicPlayer/logo.jpg'); */
+    background-position: center;
+    background-size: cover;
+}
+
+.songName{
+    color: black;
+    background-color: rgb(247, 161, 121);
+    margin-left: 2.5%;
+    padding: 7px;
+    max-width: 60%;
+    border-radius: 10px;
+    font-family: 'Syne Tactile', cursive;
+}
+
+.playButton{
+    margin-left: 5%;
+    color: black;
+    background-image: linear-gradient(to right,yellow,orange);
+    background-size: cover;
+    background-position: center;
+    padding: 3px 7px;
+    position: absolute;
+    right: 20px;
+    font-family: 'Syne Tactile', cursive;
+    border-radius: 12px;
+}
+
+.playButton:hover{
+    cursor:pointer;
+    color: white;
+    background-color: orange;
+}
+
+.leftFooter {
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 45px;
+    width: 45px;
+    border-radius: 20px;
+    position: relative;
+    bottom: 5%;
+}
+
+@media only screen and (max-width:1152px){
+    .navText{
+        font-size: 19px;
+    }
+    .logo img{
+        height: 32px;
+        width: 32px;
+    }
+    .songLogo img{
+        height: 35px;
+        width: 40px;
+        border-radius: 25px;
+    }
+}
+@media only screen and (max-width:456px){
+    .navText{
+        font-size: 20px;
+    }
+    .navbar{
+        height: 7vh;
+    }
+    .logo img{
+        height: 22px;
+        width: 22px;
+    }
+    .musicList{
+        height: 83vh;
+    }
+    .footer{
+        height: 10vh;
+    }
+    .songName{
+        font-size: 15px;
+    }
+    .playButton{
+        font-size: 15px;
+    }
+    .fa{
+        margin: 0px 10px;
+    }
+}
+@media only screen and (max-width:585px){
+    input[type='range']{
+        width: 100%;
+    }
+}
